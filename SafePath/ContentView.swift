@@ -6,6 +6,7 @@
 //  COMMENT TEST
 //  🤠yepyepyep super cool feature!!!!(:
 //commit
+// new update!!kjh
 
 //HSKDHASLKFHALSDFHKDSHFKLDSFHKLSDHFKLA⛄️
 
@@ -63,13 +64,53 @@ struct ContentView: View {
         .sheet(isPresented: $showMenu){
             ZStack{
                 Color("darkColor")
-                Text("Menu Page")
+                
+                VStack{
+                    
+                    Spacer()
+                    
+                    Button("Home") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
                     .foregroundColor(Color("mainColor"))
                     .padding(.all)
                     .border(Color("mainColor"))
-            }
+                    
+                    Spacer()
+                    
+                    Button("Map") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .foregroundColor(Color("mainColor"))
+                    .padding(.all)
+                    .border(Color("mainColor"))
+                    
+                    Spacer()
+                    
+                    Button("Resources") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .foregroundColor(Color("mainColor"))
+                    .padding(.all)
+                    .border(Color("mainColor"))
+                    
+                    Spacer()
+                    
+                    Button("Information") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .foregroundColor(Color("mainColor"))
+                    .padding(.all)
+                    .border(Color("mainColor"))
+                    
+                    Spacer()
+                    
+                }
+                
+            } // end ZSTACK (menu buttons)
                 .transition(.move(edge: .top)) // not working
                 .edgesIgnoringSafeArea(.all)
+            
         }
         
             } // end BODY
