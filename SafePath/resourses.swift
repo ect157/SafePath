@@ -29,13 +29,19 @@ struct resourses: View {
                     // PUT MAIN STUFF HERE !!
                 }//end of VSTACK (with initial img and text)
                 .padding()
+                
+                
+               //START OF BOXES
+                
+                //END OF BOXES
+                
             }//end of ZSTACK (app background color)
             .navigationBarItems( leading:
                                     HStack{
-                
                 Image("headApp")
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
+                    .padding(.bottom, 3.0)
                 
                 Spacer()
                 
@@ -45,9 +51,9 @@ struct resourses: View {
                 
             } // end HSTACK (header icons)
             ) // end NAV ITEMS
-        }
-    }
-}
+        }//end of NAV VIEW
+    }//End of BODY
+}//End of Struct
 
 struct resourses_Previews: PreviewProvider {
     static var previews: some View {
