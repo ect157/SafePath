@@ -15,10 +15,10 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("I WANNA SLEEP 😴!")
-        }
+        }//end of VStack
         .padding()
-    }
-}
+    }//end of View
+}//end of struct
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
