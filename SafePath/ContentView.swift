@@ -45,14 +45,31 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        Image("menu")
-                            .resizable(resizingMode: .stretch)
-                            .aspectRatio(contentMode: .fit)
+                        Button(action: {
+                            self.showMenu = true
+                        }) {
+                            Image("menu")
+                                .resizable(resizingMode: .stretch)
+                                .aspectRatio(contentMode: .fit)
+                        }
+
                         
                     } // end HSTACK (header icons)
                         ) // end NAV ITEMS
                     
                 } // end MAIN CONTENT
+        .sheet(isPresented: $showMenu){
+            ZStack{
+                Color("darkColor")
+                Text("Menu Page")
+                    .foregroundColor(Color("mainColor"))
+                    .padding(.all)
+                    .border(Color("mainColor"))
+            }
+                .transition(.move(edge: .top)) // not working
+                .edgesIgnoringSafeArea(.all)
+        }
+        
             } // end BODY
         } // end CONTENT VIEW
 
