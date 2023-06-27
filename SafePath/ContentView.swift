@@ -35,45 +35,26 @@ struct ContentView: View {
                 .padding()
             }//end of ZSTACK (app background color)
                     .navigationBarItems( leading:
-                                        
-                                            Text("put items here")
-                        .font(.title)
-                        )
+                                            HStack{
+                        
+                        Image("headApp")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                        
+                        Spacer()
+                        
+                        Image("menu")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } // end HSTACK (header icons)
+                        ) // end NAV ITEMS
                     
-                }
-            }
-        }
-
-        struct DetailView: View {
-            var body: some View {
-                VStack {
-                    Text("Detail Content")
-                        .font(.largeTitle)
-                    
-                    NavigationLink(destination: SubDetailView()) {
-                        Text("Go to Subdetail")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    }
-                }
-                .navigationBarTitle("Detail")
-            }
-        }
-
-        struct SubDetailView: View {
-            var body: some View {
-                Text("Subdetail Content")
-                    .font(.largeTitle)
-                    .navigationBarTitle("Subdetail")
+                } // end MAIN CONTENT
+            } // end BODY
+        } // end CONTENT VIEW
 
         
-        
-    } //end of BODY
-}//end of STRUCT
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
