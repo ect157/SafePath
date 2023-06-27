@@ -11,6 +11,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var showMenu = false
+    
     init() {
             // Customize the navigation bar appearance
             let appearance = UINavigationBarAppearance()

@@ -13,7 +13,6 @@
 		BD2DC6972A4B1BD60068D22F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2DC6962A4B1BD60068D22F /* Preview Assets.xcassets */; };
 		BD8376282A4B49D00099D98F /* resourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8376272A4B49D00099D98F /* resourses.swift */; };
 		BD83762A2A4B49E40099D98F /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8376292A4B49E40099D98F /* info.swift */; };
-		BD83762C2A4B4AE70099D98F /* menuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD83762B2A4B4AE70099D98F /* menuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		BD2DC6962A4B1BD60068D22F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD8376272A4B49D00099D98F /* resourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resourses.swift; sourceTree = "<group>"; };
 		BD8376292A4B49E40099D98F /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
-		BD83762B2A4B4AE70099D98F /* menuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				BD2DC6912A4B1BD40068D22F /* ContentView.swift */,
 				BD8376272A4B49D00099D98F /* resourses.swift */,
 				BD8376292A4B49E40099D98F /* info.swift */,
-				BD83762B2A4B4AE70099D98F /* menuBar.swift */,
 				BD2DC6932A4B1BD60068D22F /* Assets.xcassets */,
 				BD2DC6952A4B1BD60068D22F /* Preview Content */,
 			);
@@ -147,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2DC6922A4B1BD40068D22F /* ContentView.swift in Sources */,
-				BD83762C2A4B4AE70099D98F /* menuBar.swift in Sources */,
 				BD83762A2A4B49E40099D98F /* info.swift in Sources */,
 				BD8376282A4B49D00099D98F /* resourses.swift in Sources */,
 				BD2DC6902A4B1BD40068D22F /* SafePathApp.swift in Sources */,
