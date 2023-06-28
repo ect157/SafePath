@@ -34,6 +34,17 @@ struct info: View {
 //START OF BOXES
               
                 VStack{
+                    ZStack{
+                        Color("blueColor")
+                            .cornerRadius(20)
+                            .frame(height: 50)
+                        
+                        Text("Information")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("mainColor"))
+                    }
+                    .padding(.horizontal)
                     HStack{
                         ZStack{
                             Color("darkColor")

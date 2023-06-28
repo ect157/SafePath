@@ -31,9 +31,21 @@ struct resourses: View {
                 .padding()
                 
                 
+                
  //START OF BOXES
                               
                                 VStack{
+                                    ZStack{
+                                        Color("blueColor")
+                                            .cornerRadius(20)
+                                            .frame(height: 50)
+                                        
+                                        Text("Resources")
+                                            .font(.title)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(Color("mainColor"))
+                                    }
+                                    .padding(.horizontal)
                                     HStack{
                                         ZStack{
                                             Color("darkColor")
@@ -159,6 +171,11 @@ struct resourses: View {
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
                     .padding(.bottom, 3.0)
+                
+                Spacer()
+                
+                
+                    
                 
                 Spacer()
                 
