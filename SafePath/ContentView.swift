@@ -82,7 +82,7 @@ struct ContentView: View {
                         .frame(height: 50)
                         .cornerRadius(20)
                         .padding(.all)
-                    Text("To Victims: ")
+                    Text("To Victim: ")
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor((Color("mainColor")))
