@@ -55,7 +55,7 @@ struct ContentView: View {
                   Text("     ")
                     .font(.title)
                   ZStack{
-                    Color("greenColor")
+                    Color("blueColor")
                       .cornerRadius(20)
                       .frame(height: 100)
                     Text("SafePath")
