@@ -31,9 +31,56 @@ struct resourses: View {
                 .padding()
                 
                 
-               //START OF BOXES
-                
-                //END OF BOXES
+//END OF BOXES
+                ZStack{
+                          VStack{
+                            HStack{
+                              Rectangle()
+                                .fill(Color("darkColor"))
+                              .frame(width: 175, height: 300)
+                              .cornerRadius(20) //1st big box
+                              Rectangle()
+                                .fill(Color("middleColor"))
+                              .frame(width: 175, height: 300)
+                              .cornerRadius(20)//2nd big box
+                            }//end of 1st HStack
+                            HStack{
+                              Rectangle()
+                                .fill(Color("middleColor"))
+                              .frame(width: 175, height: 300)
+                              .cornerRadius(20) //3rd big box
+                              Rectangle()
+                                .fill(Color("darkColor"))
+                              .frame(width: 175, height: 300)
+                              .cornerRadius(20)//4th big box
+                            }//end of 2nd HStack
+                          }//end of MAIN VSTACK for big box
+                          VStack{
+                            HStack{
+                              Rectangle()
+                                .fill(Color.black)
+                              .frame(width: 120, height: 50)
+                              .cornerRadius(20) //1st big box
+                              Rectangle()
+                                .fill(Color.black)
+                              .frame(width: 120, height: 50)
+                              .cornerRadius(20)//2nd big box
+                            }//end of 1st HStack
+                            HStack{
+                              Rectangle()
+                                .fill(Color.black)
+                              .frame(width: 120, height: 50)
+                              .cornerRadius(20) //3rd big box
+                              Rectangle()
+                                .fill(Color.black)
+                              .frame(width: 120, height: 50)
+                              .cornerRadius(20)//4th big box
+                            }//end of 2nd HStack
+                          }//end of MAIN VSTACK for little box
+                        }//end of MAIN ZSTACK
+ //END OF BOXES
+
+
                 
             }//end of ZSTACK (app background color)
             .navigationBarItems( leading:
