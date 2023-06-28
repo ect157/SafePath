@@ -55,13 +55,13 @@ struct ContentView: View {
                   Text("     ")
                     .font(.title)
                   ZStack{
-                    Color("greenColor")
+                    Color("blueColor")
                       .cornerRadius(20)
                       .frame(height: 100)
                     Text("SafePath")
                       .font(.title3)
                       .fontWeight(.bold)
-                      .foregroundColor((Color("darkColor")))
+                      .foregroundColor((Color("mainColor")))
 
                   } // end TITLE BOX
 
