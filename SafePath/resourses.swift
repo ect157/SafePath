@@ -31,54 +31,124 @@ struct resourses: View {
                 .padding()
                 
                 
-//END OF BOXES
-                ZStack{
-                          VStack{
-                            HStack{
-                              Rectangle()
-                                .fill(Color("darkColor"))
-                              .frame(width: 175, height: 300)
-                              .cornerRadius(20) //1st big box
-                              Rectangle()
-                                .fill(Color("middleColor"))
-                              .frame(width: 175, height: 300)
-                              .cornerRadius(20)//2nd big box
-                            }//end of 1st HStack
-                            HStack{
-                              Rectangle()
-                                .fill(Color("middleColor"))
-                              .frame(width: 175, height: 300)
-                              .cornerRadius(20) //3rd big box
-                              Rectangle()
-                                .fill(Color("darkColor"))
-                              .frame(width: 175, height: 300)
-                              .cornerRadius(20)//4th big box
-                            }//end of 2nd HStack
-                          }//end of MAIN VSTACK for big box
-                          VStack{
-                            HStack{
-                              Rectangle()
-                                .fill(Color.black)
-                              .frame(width: 120, height: 50)
-                              .cornerRadius(20) //1st big box
-                              Rectangle()
-                                .fill(Color.black)
-                              .frame(width: 120, height: 50)
-                              .cornerRadius(20)//2nd big box
-                            }//end of 1st HStack
-                            HStack{
-                              Rectangle()
-                                .fill(Color.black)
-                              .frame(width: 120, height: 50)
-                              .cornerRadius(20) //3rd big box
-                              Rectangle()
-                                .fill(Color.black)
-                              .frame(width: 120, height: 50)
-                              .cornerRadius(20)//4th big box
-                            }//end of 2nd HStack
-                          }//end of MAIN VSTACK for little box
-                        }//end of MAIN ZSTACK
- //END OF BOXES
+ //START OF BOXES
+                              
+                                VStack{
+                                    HStack{
+                                        ZStack{
+                                            Color("darkColor")
+                                                .cornerRadius(20)
+                                                .frame( height: 300)
+                                            VStack{
+                                                ZStack{
+                                                    Color("middleColor")
+                                                        .frame(height: 50)
+                                                        .cornerRadius(20)
+                                                        .padding(.all)
+                                                    Text("Box 1")
+                                                        .font(.title3)
+                                                        .fontWeight(.bold)
+                                                        .foregroundColor((Color("mainColor")))
+                                                }
+                                                Text("hshdsjkskadhjksadhjksdhkjashdjk")
+                                                    .font(.title3)
+                                                    .fontWeight(.bold)
+                                                    .foregroundColor((Color("mainColor")))
+                                            }
+                                        }
+                                        .padding(.leading) // End of 1st BOX
+                                        
+                                        ZStack{
+                                          Color("middleColor")
+                                            .cornerRadius(20)
+                                            .frame(height: 300)
+                                          VStack{
+                                            ZStack{
+                                              Color("darkColor")
+                                                    .frame(height: 50)
+                                                .cornerRadius(20)
+                                                .padding(.all)
+                                            Text("Box 2")
+                                                .font(.title3)
+                                                .fontWeight(.bold)
+                                                .foregroundColor((Color("mainColor")))
+                                            }
+                                            Text("hshdsjkskadhjksadhjksdhkjashdjk")
+                                              .font(.title3)
+                                              .fontWeight(.bold)
+                                              .foregroundColor((Color("mainColor")))
+                                          }
+                                        }
+                                        .padding(.trailing) // End of 3rd BOX
+                                    } // end of HSTACK
+                                    
+                                    
+                                    HStack{
+                                                    ZStack{
+                                                      Color("middleColor")
+                                                        .cornerRadius(20)
+                                                        .frame(height: 300)
+                                                      VStack{
+                                                        ZStack{
+                                                          Color("darkColor")
+                                                                .frame(height: 50)
+                                                            .cornerRadius(20)
+                                                            .padding(.all)
+                                                        Text("Box 3")
+                                                            .font(.title3)
+                                                            .fontWeight(.bold)
+                                                            .foregroundColor((Color("mainColor")))
+                                                        }
+                                                        Text("hshdsjkskadhjksadhjksdhkjashdjk")
+                                                          .font(.title3)
+                                                          .fontWeight(.bold)
+                                                          .foregroundColor((Color("mainColor")))
+                                                      }
+                                                    }
+                                                    .padding(.leading) // End of 3rd BOX
+                                                      Spacer()
+                                                    ZStack{
+                                                      Color("darkColor")
+                                                        .cornerRadius(20)
+                                                        .frame( height: 300)
+                                                      VStack{
+                                                        ZStack{
+                                                          Color("middleColor")
+                                                            .frame(height: 50)
+                                                            .cornerRadius(20)
+                                                            .padding(.all)
+                                                        Text("Box 4")
+                                                            .font(.title3)
+                                                            .fontWeight(.bold)
+                                                            .foregroundColor((Color("mainColor")))
+                                                        }
+                                                        Text("hshdsjkskadhjksadhjksdhkjashdjk")
+                                                          .font(.title3)
+                                                          .fontWeight(.bold)
+                                                          .foregroundColor((Color("mainColor")))
+                                                      }
+                                                    }
+                                                    .padding(.trailing) // End of 4th BOX
+                                                      } // end of HSTACK
+
+
+                    
+                                    
+                                }//end of VSTACK
+
+
+
+
+
+
+
+
+
+
+
+                                
+                                
+                //END OF BOXES
 
 
                 
