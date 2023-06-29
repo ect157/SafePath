@@ -28,5 +28,12 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
                 )
             }
         }
+    func getLongitude() -> CLLocationDegrees? {
+            return region.center.longitude
+        }
+        
+        func getLatitude() -> CLLocationDegrees? {
+            return region.center.latitude
+        }
 }
 

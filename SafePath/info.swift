@@ -62,17 +62,18 @@ struct info: View {
                     .frame(height: 50)
                     .cornerRadius(20)
                     .padding(.all)
-                  Button("Button 1") {
+                  Button("Saftey Tips") {
                     self.b1Clicked = true
                   }
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor((Color("mainColor")))
                 }
-                Text("hshdsjkskadhjksadhjksdhkjashdjk")
+                Text("Safety Planning Information\n...")
                   .font(.body)
                   .fontWeight(.bold)
                   .foregroundColor((Color("mainColor")))
+                  .multilineTextAlignment(.center)
                   .padding(.horizontal)
               }
             }
@@ -88,14 +89,14 @@ struct info: View {
                   .frame(height: 50)
                 .cornerRadius(20)
                 .padding(.all)
-                Button("Button 2") {
+                Button("Volunteering") {
                   self.b2Clicked = true
                 }
                 .font(.title3)
                 .fontWeight(.bold)
                 .foregroundColor((Color("mainColor")))
               }
-              Text("hshdsjkskadhjksadhjksdhkjashdjk")
+              Text("Ways to get involved\n...")
                .font(.body)
                .fontWeight(.bold)
                .foregroundColor((Color("mainColor")))
@@ -117,14 +118,14 @@ struct info: View {
                         .frame(height: 50)
                       .cornerRadius(20)
                       .padding(.all)
-                      Button("Button 3") {
+                      Button("Donating") {
                         self.b3Clicked = true
                       }
                       .font(.title3)
                       .fontWeight(.bold)
                       .foregroundColor((Color("mainColor")))
                     }
-                    Text("hshdsjkskadhjksadhjksdhkjashdjk")
+                    Text("Support organizations\n...")
                      .font(.body)
                      .fontWeight(.bold)
                      .foregroundColor((Color("mainColor")))

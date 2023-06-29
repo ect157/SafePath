@@ -46,8 +46,17 @@ struct map: View {
                     .ignoresSafeArea()
                 VStack {
                     // PUT MAIN STUFF HERE !!
-                }//end of VSTACK (with initial img and text)
-                .padding()
+                    ZStack{
+                      Color("blueColor")
+                        .cornerRadius(20)
+                        .frame(height: 50)
+
+                      Text("Map")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("mainColor"))
+                    }
+                    .padding(.top, 20.0)
                 
                 Map(
                    coordinateRegion: $manager.region,
@@ -55,7 +64,26 @@ struct map: View {
                    showsUserLocation: true,
                    userTrackingMode: $tracking
                 ).cornerRadius(20)
-                    .padding(.vertical, 62.0)
+                        .padding(.vertical, 35.0)
+                
+                //sms
+                    ZStack{
+                        Color("redColor")
+                                 .cornerRadius(20)
+                                 .frame(width: 250, height: 50)
+                        Button(action: {
+                            sendMessage()
+                        }, label: {
+                            Text("SEND LOCATION")
+                                .foregroundColor(Color("mainColor"))
+                        })
+                    }
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("redColor"))
+                //sms
+                }//end of VSTACK (with initial img and text)
+                .padding()
 
 
                 
@@ -83,6 +111,14 @@ struct map: View {
         }//end of NAV VIEW
        
     }
+    //sms
+    func sendMessage(){
+        let sms: String = "sms:+19842843213&body= Location: Longitude = \(manager.getLongitude()) Latitude = \(manager.getLatitude())"
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+    }
+    //sms
+    
 }
 
 
