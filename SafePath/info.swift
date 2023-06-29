@@ -55,7 +55,7 @@ struct info: View {
             ZStack{
               Color("darkColor")
                 .cornerRadius(20)
-                .frame( height: 280)
+                .frame( height: 225)
               VStack{
                 ZStack{
                   Color("middleColor")
@@ -70,7 +70,7 @@ struct info: View {
                     .foregroundColor((Color("mainColor")))
                 }
                 Text("hshdsjkskadhjksadhjksdhkjashdjk")
-                  .font(.title3)
+                  .font(.body)
                   .fontWeight(.bold)
                   .foregroundColor((Color("mainColor")))
                   .padding(.horizontal)
@@ -81,7 +81,7 @@ struct info: View {
             ZStack{
              Color("middleColor")
               .cornerRadius(20)
-              .frame(height: 280)
+              .frame(height: 225)
              VStack{
               ZStack{
                Color("darkColor")
@@ -96,7 +96,7 @@ struct info: View {
                 .foregroundColor((Color("mainColor")))
               }
               Text("hshdsjkskadhjksadhjksdhkjashdjk")
-               .font(.title3)
+               .font(.body)
                .fontWeight(.bold)
                .foregroundColor((Color("mainColor")))
                .padding(.horizontal)
@@ -110,7 +110,7 @@ struct info: View {
                   ZStack{
                    Color("middleColor")
                     .cornerRadius(20)
-                    .frame(height: 280)
+                    .frame(height: 225)
                    VStack{
                     ZStack{
                      Color("darkColor")
@@ -125,7 +125,7 @@ struct info: View {
                       .foregroundColor((Color("mainColor")))
                     }
                     Text("hshdsjkskadhjksadhjksdhkjashdjk")
-                     .font(.title3)
+                     .font(.body)
                      .fontWeight(.bold)
                      .foregroundColor((Color("mainColor")))
                      .padding(.horizontal)
@@ -136,7 +136,7 @@ struct info: View {
                   ZStack{
                    Color("darkColor")
                     .cornerRadius(20)
-                    .frame( height: 280)
+                    .frame( height: 225)
                    VStack{
                     ZStack{
                      Color("middleColor")
@@ -151,7 +151,7 @@ struct info: View {
                       .foregroundColor((Color("mainColor")))
                     }
                     Text("hshdsjkskadhjksadhjksdhkjashdjk")
-                     .font(.title3)
+                     .font(.body)
                      .fontWeight(.bold)
                      .foregroundColor((Color("mainColor")))
                      .padding(.horizontal)

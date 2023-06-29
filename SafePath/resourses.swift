@@ -55,7 +55,7 @@ struct resourses: View {
                     ZStack{
                       Color("darkColor")
                         .cornerRadius(20)
-                        .frame( height: 280)
+                        .frame( height: 225)
                       VStack{
                         ZStack{
                           Color("middleColor")
@@ -70,7 +70,7 @@ struct resourses: View {
                             .foregroundColor((Color("mainColor")))
                         }
                         Text("hshdsjkskadhjksadhjksdhkjashdjk")
-                          .font(.title3)
+                          .font(.body)
                           .fontWeight(.bold)
                           .foregroundColor((Color("mainColor")))
                           .padding(.horizontal)
@@ -81,7 +81,7 @@ struct resourses: View {
                     ZStack{
                      Color("middleColor")
                       .cornerRadius(20)
-                      .frame(height: 280)
+                      .frame(height: 225)
                      VStack{
                       ZStack{
                        Color("darkColor")
@@ -97,7 +97,7 @@ struct resourses: View {
 
                       }
                       Text("hshdsjkskadhjksadhjksdhkjashdjk")
-                       .font(.title3)
+                       .font(.body)
                        .fontWeight(.bold)
                        .foregroundColor((Color("mainColor")))
                        .padding(.horizontal)
@@ -111,7 +111,7 @@ struct resourses: View {
                           ZStack{
                            Color("middleColor")
                             .cornerRadius(20)
-                            .frame(height: 280)
+                            .frame(height: 225)
                            VStack{
                             ZStack{
                              Color("darkColor")
@@ -126,7 +126,7 @@ struct resourses: View {
                               .foregroundColor((Color("mainColor")))
                             }
                             Text("hshdsjkskadhjksadhjksdhkjashdjk")
-                             .font(.title3)
+                             .font(.body)
                              .fontWeight(.bold)
                              .foregroundColor((Color("mainColor")))
                              .padding(.horizontal)
@@ -137,7 +137,7 @@ struct resourses: View {
                           ZStack{
                            Color("darkColor")
                             .cornerRadius(20)
-                            .frame( height: 280)
+                            .frame( height: 225)
                            VStack{
                             ZStack{
                              Color("middleColor")
@@ -152,7 +152,7 @@ struct resourses: View {
                               .foregroundColor((Color("mainColor")))
                             }
                             Text("hshdsjkskadhjksadhjksdhkjashdjk")
-                             .font(.title3)
+                             .font(.body)
                              .fontWeight(.bold)
                              .foregroundColor((Color("mainColor")))
                              .padding(.horizontal)

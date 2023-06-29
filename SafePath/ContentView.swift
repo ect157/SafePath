@@ -59,7 +59,7 @@ struct ContentView: View {
                       .cornerRadius(20)
                       .frame(height: 100)
                     Text("SafePath")
-                      .font(.title3)
+                      .font(.title)
                       .fontWeight(.bold)
                       .foregroundColor((Color("mainColor")))
 
@@ -77,21 +77,40 @@ struct ContentView: View {
                     .cornerRadius(20)
                     .frame(height: 400)
                   VStack{
-                    ZStack{
-                      Color("middleColor")
-                        .frame(height: 50)
-                        .cornerRadius(20)
-                        .padding(.all)
-                    Text("To victim: ")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor((Color("mainColor")))
-                    }
+                      ZStack{
+                          Color("middleColor")
+                              .frame(height: 50)
+                              .cornerRadius(20)
+                              .padding(.all)
+                          VStack{
+                              Text("If you need")
+                                  .font(.title3)
+                                  .fontWeight(.bold)
+                                  .foregroundColor((Color("mainColor")))
+                              Text("HELP: ")
+                                  .font(.title3)
+                                  .fontWeight(.bold)
+                                  .foregroundColor((Color("mainColor")))
+                          }
+                      }
 
-                    Text("[write about how this is used for those that need help]")
-                      .font(.title3)
+                    Text("For urgent help, go to the MAP page to update your location. ")
+                      .font(.body)
                       .fontWeight(.bold)
                       .foregroundColor((Color("mainColor")))
+                      .padding(.horizontal)
+                      Text("")
+                      Text("Find help resources on the RESOURCES page.")
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .foregroundColor((Color("mainColor")))
+                        .padding(.horizontal)
+                      Text("")
+                      Text("Access app navigation by clicking the 3 bars at the top.")
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .foregroundColor((Color("mainColor")))
+                        .padding(.horizontal, 9.0)
 
 
                   }
@@ -115,8 +134,8 @@ struct ContentView: View {
                         .foregroundColor((Color("mainColor")))
                     }
 
-                    Text("[write about how this is used for those that want to help]")
-                      .font(.title3)
+                    Text("Access the INFORMATION tab to help, spot warning signs, or report potential danger.")
+                      .font(.body)
                       .fontWeight(.bold)
                       .foregroundColor((Color("mainColor")))
                       .padding(.horizontal)
@@ -127,6 +146,20 @@ struct ContentView: View {
 
 
                   } // end of HSTACK
+                
+                ZStack{
+                  Color("redColor")
+                    .cornerRadius(20)
+                    .frame(width: 200, height: 50)
+                  Button("HOTLINE") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                  }
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("mainColor"))
+                }
+              
+                
             } // End of MAIN STUFF
 
           }//end of VSTACK (with initial img and text)
@@ -142,89 +175,23 @@ struct ContentView: View {
 
           Spacer()
 
-          Button(action: {
-            self.showMenu = true
-          }) {
-            Image("menu")
-              .resizable(resizingMode: .stretch)
-              .aspectRatio(contentMode: .fit)
-          } // end of BUTTON IMG
+            NavigationLink(destination: menu()) {
+                Image("menu")
+                  .resizable(resizingMode: .stretch)
+                  .aspectRatio(contentMode: .fit)
+                    
+            }
 
+            
 
         } // end HSTACK (header icons)
+                             
         ) // end NAV ITEMS
 
       } // end MAIN CONTENT
-      .sheet(isPresented: $showMenu){
-        ZStack{
-          Color("darkColor")
-
-          VStack{
-
-            Spacer()
-
-            Button("Home") {
-              /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } // end HOME BUTTON
-            .foregroundColor(Color("mainColor"))
-            .padding(.all)
-            .frame(width: 200)
-            .overlay(
-              RoundedRectangle(cornerRadius: 20)
-                .stroke(Color("mainColor"), lineWidth: 3)
-            )
-
-            Text(" ")
-              .font(.title2)
-
-
-            Button("Map") {
-              /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } // end MAP BUTTON
-            .foregroundColor(Color("mainColor"))
-            .padding(.all)
-            .frame(width: 200)
-            .overlay(
-              RoundedRectangle(cornerRadius: 20)
-                .stroke(Color("mainColor"), lineWidth: 3)
-            )
-
-            Text(" ")
-              .font(.title2)
-
-            Button("Resources") {
-              /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } // end RESOURCES BUTTON
-            .foregroundColor(Color("mainColor"))
-            .padding(.all)
-            .frame(width: 200)
-            .overlay(
-              RoundedRectangle(cornerRadius: 20)
-                .stroke(Color("mainColor"), lineWidth: 3)
-            )
-
-            Text(" ")
-              .font(.title2)
-
-            Button("Information") {
-              /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } // end INFO BUTTON
-            .foregroundColor(Color("mainColor"))
-            .padding(.all)
-            .frame(width: 200)
-            .overlay(
-              RoundedRectangle(cornerRadius: 20)
-                .stroke(Color("mainColor"), lineWidth: 3)
-            )
-            Spacer()
-
-          } // end BUTTON VSTACK
-
-        } // end ZSTACK (menu buttons)
-        .transition(.move(edge: .top)) // not working
-        .edgesIgnoringSafeArea(.all)
-
-      } // end NAVIGATION
+      
+        
+        
       // MENU BAR (NOT WORKING YET) END -----------------------
 
 
