@@ -100,6 +100,7 @@ struct info: View {
                .font(.body)
                .fontWeight(.bold)
                .foregroundColor((Color("mainColor")))
+               .multilineTextAlignment(.center)
                .padding(.horizontal)
              }
             }
@@ -129,6 +130,7 @@ struct info: View {
                      .font(.body)
                      .fontWeight(.bold)
                      .foregroundColor((Color("mainColor")))
+                     .multilineTextAlignment(.center)
                      .padding(.horizontal)
                    }
                   }
@@ -144,17 +146,18 @@ struct info: View {
                       .frame(height: 50)
                       .cornerRadius(20)
                       .padding(.all)
-                      Button("Button 4") {
+                      Button("Identification") {
                         self.b4Clicked = true
                       }
                       .font(.title3)
                       .fontWeight(.bold)
                       .foregroundColor((Color("mainColor")))
                     }
-                    Text("hshdsjkskadhjksadhjksdhkjashdjk")
+                    Text("How to identify and assist a victim")
                      .font(.body)
                      .fontWeight(.bold)
                      .foregroundColor((Color("mainColor")))
+                     .multilineTextAlignment(.center)
                      .padding(.horizontal)
                    }
                   }
@@ -206,14 +209,16 @@ struct info: View {
                             .cornerRadius(20)
                             .frame(width: 300, height: 50)
 
-                          Text("More on Button 1...")
+                          Text("More on saftey tips...")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color("mainColor"))
                         }
-                        Text("lallallallalala...")
+                          Text(" - Trust Your Judgment \n  - Let trusted friends/relatives know if you feel like you are in danger \n - Set up safe words with trusted friends/relatives \n - Keep all important documents/identification with you at all times \n - Make sure you have means of communication, access to your bank account, and any medication that is needed with you at all times\n - If you think you are in immediate danger, CALL 911")
+                              .font(.title2)
                           .fontWeight(.bold)
                           .foregroundColor(Color("mainColor"))
+                          .padding(.horizontal, 15.0)
                       }
                     }
 
@@ -232,14 +237,37 @@ struct info: View {
                             .cornerRadius(20)
                             .frame(width: 300, height: 50)
 
-                          Text("More on Button 2...")
+                          Text("More on Volunteering")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color("mainColor"))
                         }
-                        Text("lallallallalala...")
+                          Text(" Discover meaningful volunteering opportunities that empower and support survivors of human trafficking through the following links:\n")
+                              .font(.title2)
                           .fontWeight(.bold)
                           .foregroundColor(Color("mainColor"))
+                          .padding(.horizontal, 15.0)
+                        Link("safehorizon", destination: URL(string: "https://www.safehorizon.org/volunteer-internship-opportunities/")!)
+                                .font(.title)
+                                .buttonStyle(.borderedProminent)
+                                .tint(Color("blueColor"))
+                                .foregroundColor(.white)
+                        Link("Sanctuary for Families", destination: URL(string: "https://sanctuaryforfamilies.org/support-us/volunteer/")!)
+                                  .font(.title)
+                                  .buttonStyle(.borderedProminent)
+                                  .tint(Color("blueColor"))
+                                  .foregroundColor(.white)
+                        Link("Restore", destination: URL(string: "https://restorenyc.org/get-involved/volunteer/")!)
+                                    .font(.title)
+                                    .buttonStyle(.borderedProminent)
+                                    .tint(Color("blueColor"))
+                                    .foregroundColor(.white)
+                        Link("WOMANKIND", destination: URL(string: "https://www.iamwomankind.org/get-involved/")!)
+                                      .font(.title)
+                                      .buttonStyle(.borderedProminent)
+                                      .tint(Color("blueColor"))
+                                      .foregroundColor(.white)
+                          
                       }
                     }
                   }
@@ -257,14 +285,51 @@ struct info: View {
                             .cornerRadius(20)
                             .frame(width: 300, height: 50)
 
-                          Text("More on Button 3...")
+                          Text("More on Donating")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color("mainColor"))
                         }
-                        Text("lallallallalala...")
+                          Text("Support organizations aiding victims of human trafficking by exploring the following donation opportunities through the provided links.")
+                              .font(.title2)
                           .fontWeight(.bold)
                           .foregroundColor(Color("mainColor"))
+                          .padding(.horizontal, 15.0)
+                          Link("safehorizon", destination: URL(string: "https://www.safehorizon.org/volunteer-internship-opportunities/")!)
+                                  .font(.title)
+                                  .buttonStyle(.borderedProminent)
+                                  .tint(Color("blueColor"))
+                                  .foregroundColor(.white)
+                          Link("Sanctuary for Families", destination: URL(string: "https://sanctuaryforfamilies.org/support-us/volunteer/")!)
+                                    .font(.title)
+                                    .buttonStyle(.borderedProminent)
+                                    .tint(Color("blueColor"))
+                                    .foregroundColor(.white)
+                          Link("Restore", destination: URL(string: "https://restorenyc.org/get-involved/volunteer/")!)
+                                      .font(.title)
+                                      .buttonStyle(.borderedProminent)
+                                      .tint(Color("blueColor"))
+                                      .foregroundColor(.white)
+                          Link("Covenant House", destination: URL(string: "https://www.covenanthouse.org/donation-options/donate-now")!)
+                                      .font(.title)
+                                      .buttonStyle(.borderedProminent)
+                                      .tint(Color("blueColor"))
+                                      .foregroundColor(.white)
+                          Link("GEMS", destination: URL(string: "https://gems-girls.networkforgood.com/")!)
+                                      .font(.title)
+                                      .buttonStyle(.borderedProminent)
+                                      .tint(Color("blueColor"))
+                                      .foregroundColor(.white)
+                          Link("WOMANKIND", destination: URL(string: "https://www.iamwomankind.org/get-involved/")!)
+                                        .font(.title)
+                                        .buttonStyle(.borderedProminent)
+                                        .tint(Color("blueColor"))
+                                        .foregroundColor(.white)
+                          Link("Sex Workers Project / Urban Justice Center", destination: URL(string: "https://swp.urbanjustice.org/donate-2/")!)
+                                        .font(.title)
+                                        .buttonStyle(.borderedProminent)
+                                        .tint(Color("blueColor"))
+                                        .foregroundColor(.white)
                       }
                     }
 
@@ -283,14 +348,20 @@ struct info: View {
                             .cornerRadius(20)
                             .frame(width: 300, height: 50)
 
-                          Text("More on Button 4...")
+                          Text("More on Identification")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color("mainColor"))
                         }
-                        Text("lallallallalala...")
+                        Text("How to identify and assist a victim")
                           .fontWeight(.bold)
                           .foregroundColor(Color("mainColor"))
+                        Link("state.gov tips", destination: URL(string: "https://www.state.gov/identify-and-assist-a-trafficking-victim/")!)
+                                        .font(.title)
+                                        .buttonStyle(.borderedProminent)
+                                        .tint(Color("blueColor"))
+                                        .foregroundColor(.white)
+                          
                       }
                     }
 
