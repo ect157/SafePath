@@ -115,7 +115,7 @@ struct map: View {
     }
     //sms
     func sendMessage(){
-        let sms: String = "HELP! EMERGENCY REPORT!!  sms:+19842843213&body= Location: Longitude = \(manager.getLongitude()) Latitude = \(manager.getLatitude())"
+        let sms: String = "sms:+19842843213&body= HELP! EMERGENCY REPORT!! Location: Longitude = \(manager.getLongitude()) Latitude = \(manager.getLatitude())"
         let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
