@@ -682,30 +682,34 @@ struct resourses: View {
                         }
                     } // end B4 SHEET
                     // END SHEETS
+            
                     
                     
                 }//end of ZSTACK (app background color)
-                .navigationBarItems( leading:
-                                        HStack{
-                    Image("headApp")
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.bottom, 3.0)
-                    
-                    Spacer()
-                    
-                    
-                    
-                    
-                    Spacer()
-                    
+        
+        .navigationBarItems( leading:
+                                HStack{
+            Image("headApp")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+                .padding(.bottom, 3.0)
+            
+            Spacer()
+
+            
+            ZStack{
+                NavigationLink(destination: menu()) {
                     Image("menu")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                     
+                }
+                
+            }
                     
                     
                 } // end HSTACK (header icons)
+    
                 ) // end NAV ITEMS
             }//end of NAV VIEW
         }//End of BODY

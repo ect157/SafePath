@@ -405,27 +405,28 @@ struct info: View {
            }//end of ZSTACK (app background color)
 
 
-           .navigationBarItems( leading:
-                 HStack{
+      .navigationBarItems( leading:
+                              HStack{
+          Image("headApp")
+              .resizable(resizingMode: .stretch)
+              .aspectRatio(contentMode: .fit)
+              .padding(.bottom, 3.0)
+          
+          Spacer()
 
-            Image("headApp")
-             .resizable(resizingMode: .stretch)
-             .aspectRatio(contentMode: .fit)
+          
+          ZStack{
+              NavigationLink(destination: menu()) {
+                  Image("menu")
+                      .resizable(resizingMode: .stretch)
+                      .aspectRatio(contentMode: .fit)
+                  
+              }
+              
+          }
 
-            Spacer()
-
-               ZStack{
-                   NavigationLink(destination: menu()) {
-                       Image("menu")
-                           .resizable(resizingMode: .stretch)
-                           .aspectRatio(contentMode: .fit)
-                       
-                   }
-                   
-               }
-
-           } // end HSTACK (header icons)
-           ) // end NAV ITEMS
+      } // end HSTACK (header icons)
+      ) // end NAV ITEMS
           }
          
          }
