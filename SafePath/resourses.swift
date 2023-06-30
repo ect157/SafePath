@@ -165,18 +165,18 @@ struct resourses: View {
 
                   //END OF BOXES
 
-                  ZStack{
-                    Color("redColor")
-                      .cornerRadius(20)
-                      .frame(width: 200, height: 50)
-                    Button("HOTLINE") {
-                      /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                    }
-                      .font(.title)
-                      .fontWeight(.bold)
-                      .foregroundColor(Color("mainColor"))
-                  }
-
+                    ZStack{
+                             Color("redColor")
+                              .cornerRadius(20)
+                              .frame(width: 200, height: 50)
+                             Button("HOTLINE") {
+                               guard let phoneURL = URL(string: "tel:\(9842843213)") else { return }
+                                     UIApplication.shared.open(phoneURL)
+                             }
+                              .font(.title)
+                              .fontWeight(.bold)
+                              .foregroundColor(Color("mainColor"))
+                            }
                 }//end of VSTACK
 
 
