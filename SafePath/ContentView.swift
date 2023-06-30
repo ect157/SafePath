@@ -3,11 +3,7 @@
 // SafePath
 //
 // Created by scholar on 6/27/23.
-// COMMENT TEST
-// :face_with_cowboy_hat:yepyepyep super cool feature!!!!(:
-// commit
-//orange
-// new update!!kjh
+
 
 import SwiftUI
 
@@ -17,8 +13,8 @@ struct ContentView: View {
 
   init() {
     // Customize the navigation bar appearance
+
     let appearance = UINavigationBarAppearance()
-    appearance.configureWithOpaqueBackground()
     appearance.backgroundColor = UIColor(Color("darkColor"))
     appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
 
@@ -41,6 +37,8 @@ struct ContentView: View {
             VStack{
               ZStack{
                 VStack{
+                    Text(" ")
+                      .font(.title3)
                   HStack{
                     Color("darkColor")
                       .cornerRadius(20)
@@ -49,22 +47,27 @@ struct ContentView: View {
                   }
                     Text(" ")
                       .font(.title)
+                    
 
                 }
-                HStack{
-                  Text("     ")
-                    .font(.title)
-                  ZStack{
-                    Color("blueColor")
-                      .cornerRadius(20)
-                      .frame(height: 100)
-                    Text("SafePath")
-                      .font(.title)
-                      .fontWeight(.bold)
-                      .foregroundColor((Color("mainColor")))
-
-                  } // end TITLE BOX
-
+                  VStack{
+                      Text(" ")
+                        .font(.title)
+                      
+                      HStack{
+                          Text("     ")
+                              .font(.title)
+                          ZStack{
+                              Color("blueColor")
+                                  .cornerRadius(20)
+                                  .frame(height: 100)
+                              Text("SafePath")
+                                  .font(.title)
+                                  .fontWeight(.bold)
+                                  .foregroundColor((Color("mainColor")))
+                              
+                          } // end TITLE BOX
+                      }
                 } // end of FIRST ROW
               } // end of ZSTACK (dark brown first row)
 
@@ -115,7 +118,7 @@ struct ContentView: View {
 
                   }
                 } // End of 2ND BOX
-                  Spacer()
+                  
 
                 ZStack{
 
@@ -152,7 +155,8 @@ struct ContentView: View {
                     .cornerRadius(20)
                     .frame(width: 200, height: 50)
                   Button("HOTLINE") {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                      guard let phoneURL = URL(string: "tel:\(9842843213)") else { return }
+                                  UIApplication.shared.open(phoneURL)
                   }
                     .font(.title)
                     .fontWeight(.bold)
@@ -166,27 +170,35 @@ struct ContentView: View {
           .padding()
         }//end of ZSTACK (app background color)
         .navigationBarItems( leading:
-                    HStack{
-
-          Image("headApp")
-            .resizable(resizingMode: .stretch)
-            .aspectRatio(contentMode: .fit)
-
-
-          Spacer()
-
-            NavigationLink(destination: menu()) {
-                Image("menu")
-                  .resizable(resizingMode: .stretch)
-                  .aspectRatio(contentMode: .fit)
-                    
-            }
-
+                                HStack{
             
+            Image("headApp")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+            
+            
+            Spacer()
+            
+            ZStack{
+                NavigationLink(destination: menu()) {
+                    Image("menu")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                    
+                }
+                
+            }
+            
+        }
+            
+            
+            
+            )
 
-        } // end HSTACK (header icons)
+
+         // end HSTACK (header icons)
                              
-        ) // end NAV ITEMS
+         // end NAV ITEMS
 
       } // end MAIN CONTENT
       

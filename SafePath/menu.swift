@@ -15,7 +15,7 @@ struct menu: View {
             ZStack{
                 Color("darkColor")
                     .ignoresSafeArea()
-                VStack{
+                VStack {
                     
                     Spacer()
                     
@@ -74,14 +74,15 @@ struct menu: View {
                     Spacer()
                     
                 }
+                .navigationBarTitle("", displayMode: .inline)
                 .navigationBarBackButtonHidden(true)
                 .navigationBarHidden(true)
                 .frame(height: 100)
             }// end BUTTON VSTACK
             
         } // end ZSTACK (menu buttons)
-        .transition(.move(edge: .top)) // not working
-        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         
      // end NAVIGATION

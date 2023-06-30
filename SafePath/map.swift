@@ -96,15 +96,17 @@ struct map: View {
                     .padding(.bottom, 3.0)
                 
                 Spacer()
+
                 
-                
+                ZStack{
+                    NavigationLink(destination: menu()) {
+                        Image("menu")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                        
+                    }
                     
-                
-                Spacer()
-                
-                Image("menu")
-                    .resizable(resizingMode: .stretch)
-                    .aspectRatio(contentMode: .fit)
+                }
                 
             } // end HSTACK (header icons)
             ) // end NAV ITEMS
@@ -113,7 +115,7 @@ struct map: View {
     }
     //sms
     func sendMessage(){
-        let sms: String = "sms:+19842843213&body= Location: Longitude = \(manager.getLongitude()) Latitude = \(manager.getLatitude())"
+        let sms: String = "HELP! EMERGENCY REPORT!!  sms:+19842843213&body= Location: Longitude = \(manager.getLongitude()) Latitude = \(manager.getLatitude())"
         let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
