@@ -30,159 +30,161 @@ struct resourses: View {
             ZStack{
                 Color("mainColor")
                     .ignoresSafeArea()
-                VStack {
-                    // PUT MAIN STUFF HERE !!
-                }//end of VSTACK (with initial img and text)
-                .padding()
-                
-                
-                
-                //START OF BOXES
-                
-                VStack{
-                    ZStack{
-                        Color("blueColor")
-                            .cornerRadius(20)
-                            .frame(height: 50)
+                ScrollView{
+                    VStack {
+                        // PUT MAIN STUFF HERE !!
+                    }//end of VSTACK (with initial img and text)
+                    .padding()
+                    
+                    
+                    
+                    //START OF BOXES
+                    
+                    VStack{
+                        ZStack{
+                            Color("blueColor")
+                                .cornerRadius(20)
+                                .frame(height: 50)
+                            
+                            Text("Resources")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("mainColor"))
+                        }
+                        .padding(.horizontal)
+                        HStack{
+                            ZStack{
+                                Color("darkColor")
+                                    .cornerRadius(20)
+                                    .frame( height: 225)
+                                VStack{
+                                    ZStack{
+                                        Color("middleColor")
+                                            .frame(height: 50)
+                                            .cornerRadius(20)
+                                            .padding(.horizontal)
+                                        Button("Emergency") {
+                                            self.b1Clicked = true
+                                        }
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                    }
+                                    Text("In an emergency, call 911")
+                                        .font(.body)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                    Spacer().frame( height: 35)
+                                }
+                            }
+                            .padding(.leading) // End of 1st BOX
+                            
+                            ZStack{
+                                Color("middleColor")
+                                    .cornerRadius(20)
+                                    .frame(height: 225)
+                                VStack{
+                                    ZStack{
+                                        Color("darkColor")
+                                            .frame(height: 50)
+                                            .cornerRadius(20)
+                                            .padding(.horizontal)
+                                        Button("Police Departments") {
+                                            self.b2Clicked = true
+                                        }
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                        
+                                        
+                                    }
+                                    Text("Here are some of the police departments in New York City")
+                                        .font(.body)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                }
+                            }
+                            .padding(.trailing) // End of 3rd BOX
+                        } // end of HSTACK
                         
-                        Text("Resources")
+                        
+                        HStack{
+                            ZStack{
+                                Color("middleColor")
+                                    .cornerRadius(20)
+                                    .frame(height: 225)
+                                VStack{
+                                    ZStack{
+                                        Color("darkColor")
+                                            .frame(height: 50)
+                                            .cornerRadius(20)
+                                            .padding(.horizontal)
+                                        Button("Organizations") {
+                                            self.b3Clicked = true
+                                        }
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                    }
+                                    Text("Here are some organizations created to help victims of human trafficking")
+                                        .font(.body)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                }
+                            }
+                            .padding(.leading) // End of 3rd BOX
+                            Spacer()
+                            ZStack{
+                                Color("darkColor")
+                                    .cornerRadius(20)
+                                    .frame( height: 225)
+                                VStack{
+                                    ZStack{
+                                        Color("middleColor")
+                                            .frame(height: 50)
+                                            .cornerRadius(20)
+                                            .padding(.horizontal)
+                                        Button("Fire \n Departments") {
+                                            self.b4Clicked = true
+                                        }
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                    }
+                                    Text("Here are some of the fire departments in New York City")
+                                        .font(.body)
+                                        .fontWeight(.bold)
+                                        .foregroundColor((Color("mainColor")))
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                }
+                            }
+                            .padding(.trailing) // End of 4th BOX
+                        } // end of HSTACK
+                        
+                        
+                        //END OF BOXES
+                        
+                        ZStack{
+                            Color("redColor")
+                                .cornerRadius(20)
+                                .frame(width: 200, height: 50)
+                            Button("HOTLINE") {
+                                guard let phoneURL = URL(string: "tel:\(9842843213)") else { return }
+                                UIApplication.shared.open(phoneURL)
+                            }
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color("mainColor"))
-                    }
-                    .padding(.horizontal)
-                    HStack{
-                        ZStack{
-                            Color("darkColor")
-                                .cornerRadius(20)
-                                .frame( height: 225)
-                            VStack{
-                                ZStack{
-                                    Color("middleColor")
-                                        .frame(height: 50)
-                                        .cornerRadius(20)
-                                        .padding(.horizontal)
-                                    Button("Emergency") {
-                                        self.b1Clicked = true
-                                    }
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                }
-                                Text("In an emergency, call 911")
-                                    .font(.body)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                                Spacer().frame( height: 35)
-                            }
                         }
-                        .padding(.leading) // End of 1st BOX
-                        
-                        ZStack{
-                            Color("middleColor")
-                                .cornerRadius(20)
-                                .frame(height: 225)
-                            VStack{
-                                ZStack{
-                                    Color("darkColor")
-                                        .frame(height: 50)
-                                        .cornerRadius(20)
-                                        .padding(.horizontal)
-                                    Button("Police Departments") {
-                                        self.b2Clicked = true
-                                    }
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                    
-                                }
-                                Text("Here are some of the police departments in New York City")
-                                    .font(.body)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                            }
-                        }
-                        .padding(.trailing) // End of 3rd BOX
-                    } // end of HSTACK
-                    
-                    
-                    HStack{
-                        ZStack{
-                            Color("middleColor")
-                                .cornerRadius(20)
-                                .frame(height: 225)
-                            VStack{
-                                ZStack{
-                                    Color("darkColor")
-                                        .frame(height: 50)
-                                        .cornerRadius(20)
-                                        .padding(.horizontal)
-                                    Button("Organizations") {
-                                        self.b3Clicked = true
-                                    }
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                }
-                                Text("Here are some organizations created to help victims of human trafficking")
-                                    .font(.body)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                            }
-                        }
-                        .padding(.leading) // End of 3rd BOX
-                        Spacer()
-                        ZStack{
-                            Color("darkColor")
-                                .cornerRadius(20)
-                                .frame( height: 225)
-                            VStack{
-                                ZStack{
-                                    Color("middleColor")
-                                        .frame(height: 50)
-                                        .cornerRadius(20)
-                                        .padding(.horizontal)
-                                    Button("Fire \n Departments") {
-                                        self.b4Clicked = true
-                                    }
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                }
-                                Text("Here are some of the fire departments in New York City")
-                                    .font(.body)
-                                    .fontWeight(.bold)
-                                    .foregroundColor((Color("mainColor")))
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal)
-                            }
-                        }
-                        .padding(.trailing) // End of 4th BOX
-                    } // end of HSTACK
-                    
-                    
-                    //END OF BOXES
-                    
-                    ZStack{
-                        Color("redColor")
-                            .cornerRadius(20)
-                            .frame(width: 200, height: 50)
-                        Button("HOTLINE") {
-                            guard let phoneURL = URL(string: "tel:\(9842843213)") else { return }
-                            UIApplication.shared.open(phoneURL)
-                        }
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("mainColor"))
-                    }
-                }//end of VSTACK
-                
+                    }//end of VSTACK
+                }
                 
                 // START SHEETS
                 
@@ -232,14 +234,94 @@ struct resourses: View {
                                         .fontWeight(.bold)
                                         .foregroundColor(Color("mainColor"))
                                 }
+                                .padding(.top)
                                 
+//Start of Police
                                 
+                                ScrollView{
+                                    VStack{
+                                        ZStack{
+                                            Rectangle()
+                                                .frame(width: 350, height: 600)
+                                                .foregroundColor(Color("darkColor"))
+                                                .cornerRadius(20)
+                                            
+                                            VStack{
+                                                Text("Manhattan")
+                                                    .font(.title)
+                                                    .foregroundColor(.white)
+                                                    .bold()
+                                                Group{
+                                                    
+                                                    Text(" ")
+                                                        .font(.title)
+                                                    Text("Precinct: 1st Precinct\nPhone Number: 212-334-0611\nAddress: 16 Ericsson Place")
+                                                        .foregroundColor(.white)
+                                                        .padding(.horizontal, 31.0)
+                                                    
+                                                    Text(" ")
+                                                        .font(.title)
+                                                    
+                                                    Text("Precinct: 5th Precinct\nPhone Number: 212-334-0711\nAddress: 19 Elizabeth Street")
+                                                        .foregroundColor(.white)
+                                                        .padding(.horizontal, 31.0)
+                                                    
+                                                    Text(" ")
+                                                        .font(.title)
+                                                    
+                                                    Text("Precinct: 6th Precinct\nPhone Number: 212-741-4811\nAddress: 233 West 10 Street")
+                                                        .foregroundColor(.white)
+                                                        .padding(.horizontal, 31.0)
+                                                    
+                                                    Text(" ")
+                                                        .font(.title)
+                                                    
+                                                    Text("Precinct: 7th Precinct\nPhone Number: 212-477-7311\nAddress: 19 1/2 Pitt Street")
+                                                        .foregroundColor(.white)
+                                                        .padding(.horizontal, 31.0)
+                                                    
+                                                    Text(" ")
+                                                        .font(.title)
+                                                    
+                                                    Text("Precinct: 9th Precinct\nPhone Number: 212-477-7811\nAddress: 321 East 5 Street")
+                                                        .foregroundColor(.white)
+                                                        .padding(.horizontal, 31.0)
+                                                }
+                                                Group{
+                                                    Text(" ")
+                                                    .font(.title)}
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                }//Group 1
+                                                
+                                                
+                                                Group{
+                                                    
+                                                    
+                                                }//Group 2
+                                                
+                                                
+                                                }
+                                            }//Vstack 1
+                                            
+                                        }//Zstack 1
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    }//Vstack
                                 
-                                
-                                
-                                
-                                
-                                
+                                }//ScrollView
                                 
                             }
                         }
@@ -415,9 +497,7 @@ struct resourses: View {
                             }
                             
                         }
-                    } // end B3 SHEET
-                    
-                    .sheet(isPresented: $b4Clicked) {
+                .sheet(isPresented: $b4Clicked) {
                         ZStack{
                             Color("darkColor")
                                 .ignoresSafeArea()
@@ -673,7 +753,10 @@ struct resourses: View {
                                             
                                             
                                             
+                                            
+                                            
                                             .foregroundColor(Color("darkColor"))
+                                            
                                         }//end of ZStack Brooklyn
                                     }//End of VSTACK
                                 }//End of ScrollView
@@ -682,37 +765,19 @@ struct resourses: View {
                         }
                     } // end B4 SHEET
                     // END SHEETS
+                    } // end BODY
+                    
+    // ERROR HERE
+                
             
                     
                     
                 }//end of ZSTACK (app background color)
-        
-        .navigationBarItems( leading:
-                                HStack{
-            Image("headApp")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fit)
-                .padding(.bottom, 3.0)
-            
-            Spacer()
-
-            
-            ZStack{
-                NavigationLink(destination: menu()) {
-                    Image("menu")
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                    
-                }
-                
-            }
-                    
-                    
-                } // end HSTACK (header icons)
     
-                ) // end NAV ITEMS
-            }//end of NAV VIEW
-        }//End of BODY
+        
+
+          //  }//end of NAV VIEW
+//}//End of BODY
 //    }//End of Struct
 //}
   
